@@ -1,7 +1,7 @@
 {
   "autoload": {
     "psr-4": {
-      "PDI\\": "src",
+      "Newsletter\\": "src",
       "Tests\\": "tests"
     }
   },
