@@ -14,12 +14,16 @@
     }
   },
   "require": {
+    "guzzlehttp/psr7": "^2.4",
+    "laminas/laminas-httphandlerrunner": "^2.1",
+    "laminas/laminas-diactoros": "^2.13",
     "laminas/laminas-stratigility": "^3.8"
   },
   "require-dev": {
-    "phpunit/phpunit": "^9",
+    "phpunit/phpunit": "^9.5",
     "infection/infection": "^0.26.13",
     "phpstan/phpstan": "^1.8",
-    "friendsofphp/php-cs-fixer": "^3.9"
+    "friendsofphp/php-cs-fixer": "^3.9",
+    "behat/behat": "^3.11"
   }
 }
