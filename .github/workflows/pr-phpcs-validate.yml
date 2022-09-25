@@ -20,3 +20,5 @@ jobs:
         run: composer install
       - name: Running sniffer PSR12
         run: make validate-phpcs
+      - name: Running sniffer PSR12 in tests files
+        run: make validate-phpcs-tests

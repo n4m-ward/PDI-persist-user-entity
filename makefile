@@ -10,5 +10,8 @@ validate-stan:
 validate-phpcs:
 	./vendor/bin/php-cs-fixer fix src -v --dry-run
 
+validate-phpcs-tests:
+	./vendor/bin/php-cs-fixer fix tests -v --dry-run
+
 test-behat:
 	./vendor/bin/behat
