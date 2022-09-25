@@ -19,7 +19,7 @@ class UserRepositoryInMemory implements UserRepository
         return $user;
     }
 
-    public function getUserById(string $id): User
+    public function getUserById(string $id): ?User
     {
         return $this->users[$id];
     }
