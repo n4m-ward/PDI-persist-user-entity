@@ -8,7 +8,8 @@ class User
         public readonly string $id,
         public readonly string $name,
         public readonly Email $email
-    ) {}
+    )
+    {}
 
     public static function withNameAndEmail(string $name, Email $email): self {
         return new self(id: uniqid(), name: $name, email: $email);

@@ -3,13 +3,11 @@
         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.3/phpunit.xsd"
         backupGlobals="true"
         backupStaticAttributes="false"
-        cacheTokens="false"
         colors="true"
         convertErrorsToExceptions="true"
         convertNoticesToExceptions="true"
         convertWarningsToExceptions="false"
         forceCoversAnnotation="false"
-        mapTestClassNameToCoveredClassName="false"
 
         processIsolation="false"
         stopOnError="false"
