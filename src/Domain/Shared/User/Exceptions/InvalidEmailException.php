@@ -2,5 +2,9 @@
 
 namespace Newsletter\Domain\Shared\User\Exceptions;
 
-class InvalidEmailException extends DomainException
-{ }
+use DomainException;
+use Throwable;
+
+class InvalidEmailException extends DomainException implements Throwable
+{
+}
