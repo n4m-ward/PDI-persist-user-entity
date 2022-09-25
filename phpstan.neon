@@ -4,5 +4,3 @@ parameters:
         - src
         - tests
     checkGenericClassInNonGenericObjectType: false
-    ignoreErrors:
-    		- '#Call to an undefined method [a-zA-Z0-9\\_]+::method\(\)#'
