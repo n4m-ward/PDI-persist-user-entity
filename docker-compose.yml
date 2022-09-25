@@ -1,8 +1,8 @@
 version: '3'
 services:
 
-  pdi-database:
-    container_name: pdiDatabase
+  newsletter-database:
+    container_name: newsletterDatabase
     image: postgres:10
     environment:
       - POSTGRES_DB=test
