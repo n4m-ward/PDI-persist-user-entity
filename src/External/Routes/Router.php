@@ -4,6 +4,7 @@ namespace Newsletter\External\Routes;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use Tests\External\Routes\DependencyInjection;
 
 class Router
 {
@@ -17,7 +18,9 @@ class Router
         foreach (self::$routes as $routeDto) {
             if (RouterIsRightToBeRedirectedToController::validate($req, $routeDto)) {
                 [$controllerClass, $controllerMethod] = $routeDto->controller;
-                return (new $controllerClass())->{$controllerMethod}($req);
+                $controller = DependencyInjection::get($controllerClass);
+
+                return $controller->{$controllerMethod}($req);
             }
         }
 
