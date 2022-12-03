@@ -24,7 +24,7 @@ class RouterIsRightToBeRedirectedToControllerTest extends TestCase
         $this->mockServerRequestPath($path = '/route/subroute');
         $controllerPath = '/route/subroute';
 
-        $routeDto = new RouterDto(method: $method,path: $controllerPath, controller:  []);
+        $routeDto = new RouterDto(method: $method, path: $controllerPath, controller: []);
         $result = RouterIsRightToBeRedirectedToController::validate($this->serverRequestMock, $routeDto);
 
         $this->assertTrue($result);
@@ -36,7 +36,7 @@ class RouterIsRightToBeRedirectedToControllerTest extends TestCase
         $this->mockServerRequestPath($path = '/route/subroute');
         $controllerPath = '/route/subroute';
 
-        $routeDto = new RouterDto(method: 'GET',path: $controllerPath, controller:  []);
+        $routeDto = new RouterDto(method: 'GET', path: $controllerPath, controller: []);
         $result = RouterIsRightToBeRedirectedToController::validate($this->serverRequestMock, $routeDto);
 
         $this->assertFalse($result);
@@ -48,7 +48,7 @@ class RouterIsRightToBeRedirectedToControllerTest extends TestCase
         $this->mockServerRequestPath($path = '/route/subroute/other-subroute');
         $controllerPath = '/route/subroute';
 
-        $routeDto = new RouterDto(method: $method,path: $controllerPath, controller:  []);
+        $routeDto = new RouterDto(method: $method, path: $controllerPath, controller: []);
         $result = RouterIsRightToBeRedirectedToController::validate($this->serverRequestMock, $routeDto);
 
         $this->assertFalse($result);
@@ -60,7 +60,7 @@ class RouterIsRightToBeRedirectedToControllerTest extends TestCase
         $this->mockServerRequestPath($path = '/route/subroute?test=123');
         $controllerPath = '/route/subroute';
 
-        $routeDto = new RouterDto(method: $method,path: $controllerPath, controller:  []);
+        $routeDto = new RouterDto(method: $method, path: $controllerPath, controller: []);
         $result = RouterIsRightToBeRedirectedToController::validate($this->serverRequestMock, $routeDto);
 
         $this->assertTrue($result);

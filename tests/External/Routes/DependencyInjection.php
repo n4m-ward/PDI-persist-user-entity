@@ -4,18 +4,18 @@ namespace Tests\External\Routes;
 
 class DependencyInjection
 {
-    private static array $contents = [];
+    private static array $contents = []; // @phpstan-ignore-line
 
-    public static function register(string $registerId, $object): void
+    public static function register(string $registerId, $object): void // @phpstan-ignore-line
     {
         self::$contents[$registerId] = $object;
     }
 
-    public static function get(string $registerId)
+    public static function get(string $registerId) // @phpstan-ignore-line
     {
         $registeredObject = self::$contents[$registerId] ?? null;
 
-        if(isset($registeredObject)) {
+        if (isset($registeredObject)) {
             return $registeredObject;
         }
 

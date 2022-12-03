@@ -12,9 +12,9 @@ trait BuildMocksForRouter
      */
     private function validateTraitIsValidToUse(): void
     {
-        $serverRequestMockExist = property_exists(new self, 'serverRequestMock');
+        $serverRequestMockExist = property_exists(new self(), 'serverRequestMock');
 
-        if(!$serverRequestMockExist) {
+        if (!$serverRequestMockExist) {
             throw new Exception('Seu teste precisa da variavel serverRequestMock para usar essa trait');
         }
     }
